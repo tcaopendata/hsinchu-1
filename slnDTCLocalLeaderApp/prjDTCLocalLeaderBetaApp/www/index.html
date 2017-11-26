@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--
+        ���ݭn�b�U�誺���~���Ҥ��ۭq���e�w���ʭ�h�C�N 'unsafe-inline' �[�J default-src �H�ҥΤ��O JavaScript�C
+        �p�ݸԲӸ�ơA�аѾ\ http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>里長伯大聲公</title>
+        <link href="css/loading.css" rel="stylesheet" />
+
+
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+        <script src="scripts/jquery-1.11.3.min.js"></script>
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    <body>
+
+        <!--首頁,開始-->
+        <div data-role="page" id="pageIndex" style="background-color:#0B9998;">
+            <div data-role="content" style="padding:0px;">
+                <img src="img/index_banner.png" style="width:100%;" />
+                <div class="ui-grid-a" style="text-align:center;">
+                    <div class="ui-block-a"><a href="#"><img src="img/index_01.png" name="lnkScanQR" class="index_icon" id="lnkActiveList" /></a><br><span class="text_size">活動清單</span></div>
+                    <div class="ui-block-b"><a href="#"><img src="img/index_02.png" name="lnkSetting" class="index_icon" id="lnkActivePhotoList" /></a><br><span class="text_size">活動照片</span></div>
+                    <div class="ui-block-a"><a href="#"><img src="img/index_03.png" name="lnkDsList" class="index_icon" id="lnkDsList" /></a><br><span class="text_size">重要通知</span></div>
+                    <div class="ui-block-b"><a href="#"><img src="img/index_04.png"  class="index_icon" id="lnkSetting" /></a><br><span class="text_size">設定</span></div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" style="background-color:#144F5C;color:#ffffff;text-shadow: 0.0em 0.0em #ffffff"><h1>里長伯 版權所有</h1></div>
+        </div>
+        <!--首頁,結束-->
+
+        <!--設定,開始-->
+        <div data-role="page" id="pageSetting">
+            <div data-role="header" data-position="fixed" style="background-color:#144F5C;">
+                <h1><img src="img/index_logo.png"  style="width:115%;" /></h1>
+            </div>
+
+            <div data-role="content">
+                <div>
+                    帳號（身份證）是連結雲端個人資料使用，輸入帳號可進行雲端資料同步。
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtUid">帳號：(身份證)</label>
+                    <input type="text" name="txtUid" id="txtUid" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtName">姓名：</label>
+                    <input type="text" name="txtName" id="txtName" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtPhone">手機：</label>
+                    <input type="text" name="txtPhone" id="txtPhone" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="txtArea">區域：</label>
+                    <input type="text" name="txtArea" id="txtArea" value="" />
+                </div>
+
+                <!--<input type="text" name="txtToken" id="txtToken" value="" />-->
+                <input type="button"  id="btnMember" value="取得會員" />
+            </div>
+
+            <div data-role="footer" data-position="fixed" style="background-color:#144F5C;color:#ffffff;text-shadow: 0.0em 0.0em #ffffff"><h1>里長伯 版權所有</h1></div>
+        </div>
+        <!--設定,結束-->
+
+
+        <!--活動清單,開始-->
+        <div data-role="page" id="pageActiveList">
+            <div data-role="header" data-position="fixed" style="background-color:#144F5C;">
+                <h1><img src="img/index_logo.png" style="width:115%;" /></h1>
+            </div>
+
+            <div data-role="content">
+                <!--Loading,開始-->
+                <div id="floatingBarsG">
+                    <div class="blockG" id="rotateG_01"></div>
+                    <div class="blockG" id="rotateG_02"></div>
+                    <div class="blockG" id="rotateG_03"></div>
+                    <div class="blockG" id="rotateG_04"></div>
+                    <div class="blockG" id="rotateG_05"></div>
+                    <div class="blockG" id="rotateG_06"></div>
+                    <div class="blockG" id="rotateG_07"></div>
+                    <div class="blockG" id="rotateG_08"></div>
+                </div>
+                <!--Loading,結束-->
+                <ul data-role="listview" id="listActive"></ul>
+            </div>
+            <div data-role="footer" data-position="fixed" style="background-color:#144F5C;color:#ffffff;text-shadow: 0.0em 0.0em #ffffff"><h1>里長伯 版權所有</h1></div>
+        </div>
+        <!--活動清單,結束-->
+
+        <!--活動明細,開始-->
+        <div data-role="page" id="pageActiveDetails">
+            <div data-role="header" data-position="fixed" style="background-color:#144F5C;">
+                <h1><img src="img/index_logo.png" style="width:115%;" /></h1>
+            </div>
+
+
+
+
+            <div data-role="content">
+                <p id="活動名稱" class="text_size2"></p>
+                <p id="活動內容" class="text_size2"></p>
+                <p id="活動地點" class="text_size2"></p>
+                <p id="活動起始時間" class="text_size2"></p>
+                <p id="活動結束時間" class="text_size2"></p>
+                <p id="圖片"></p>
+            </div>
+            <div data-role="footer" data-position="fixed" id="divFooter"><h1><img src="img/confirm.png" id="btnSignUp" class="confirm_SignUp" /><br />確認參加</h1></div>
+        </div>
+        <!--活動明細,結束-->
+
+
+        <!--活動照片,開始-->
+        <div data-role="page" id="pageActivePhotoList">
+            <div data-role="header" data-position="fixed" style="background-color:#144F5C;">
+                <h1><img src="img/index_logo.png" style="width:115%;" /></h1>
+            </div>
+
+            <div data-role="content">
+
+                <ul data-role="listview" id="listPhoto"></ul>
+            </div>
+            <div data-role="footer" data-position="fixed" style="background-color:#144F5C;color:#ffffff;text-shadow: 0.0em 0.0em #ffffff"><h1>里長伯 版權所有</h1></div>
+        </div>
+        <!--活動照片,結束-->
+
+        <!--活動照片明細,開始-->
+        <div data-role="page" id="pageActivePhotoDetails">
+            <div data-role="header" data-position="fixed" style="background-color:#144F5C;">
+                <h1><img src="img/index_logo.png" style="width:115%;" /></h1>
+            </div>
+
+            <div data-role="content">
+
+                <div id="listPhotoDetails" style="text-align:center;"></div>
+            </div>
+            <div data-role="footer" data-position="fixed" style="background-color:#144F5C;color:#ffffff;text-shadow: 0.0em 0.0em #ffffff"><h1><img src="img/index_02.png" id="btnPhotoUpload" style="width:80px" /></h1></div>
+        </div>
+        <!--活動照片明細,結束-->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>

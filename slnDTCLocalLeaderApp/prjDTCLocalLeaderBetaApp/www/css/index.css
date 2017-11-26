@@ -1,0 +1,38 @@
+.index_logo {
+    width: 200%;
+}
+
+
+.index_icon {
+    margin-top:20px;
+    width: 45%;
+}
+
+.index_icon:active {
+    opacity:0.3;
+    transform-origin:0;
+    transform:scale(0.7,0.7);
+    /*transform:rotate(360deg);*/
+    transition: 0.2s ease;
+    /*transform-origin:0;
+    transform:scale(0.8,1.8);*/
+}
+.confirm_get_medicine:active {
+    opacity: 0.3;
+    transform-origin: 0;
+    transform: scale(0.7,0.7);
+    transition: 0.2s ease;
+}
+
+.text_size{
+    font-size:13pt;
+    color:#ffffff;
+    text-shadow: 0.0em 0.0em #ffffff;
+}
+
+.text_size2{
+    font-size:13pt;
+    color:#000000;
+    text-shadow: 0.0em 0.0em #ffffff;
+}
+
